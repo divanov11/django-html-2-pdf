@@ -44,7 +44,7 @@ class DownloadPDF(View):
 
 		response = HttpResponse(pdf, content_type='application/pdf')
 		filename = "Invoice_%s.pdf" %("12341231")
-		content = "attachment; filename='%s'" %(filename)
+		content = "attachment; filename=%s" %(filename)
 		response['Content-Disposition'] = content
 		return response
 
